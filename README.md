@@ -1037,9 +1037,10 @@ Este algoritmo resulta numa pontuação final para cada ramo de seguro, que deve
 
 - Configure o seu projeto para que se conecte a um banco de dados MySQL.
 - Desenvolva as entidades, crie os relacionamentes entre as classes de acordo com o diagrama a baixo e faça o mapeamento das entidade para serem persistidos em um banco de dados MySQL.
-  - > Obs.: crie as entidade se baseando nas [especificações](#especificações) de cada entidade
-
+  - > Obs.: crie as entidade se baseando nas [especificações](#especificações) de cada entidade.
+- Crie os repositories para cada uma das entidades que serão persistidas no banco de dados.
 - Extra/Opcional:
+  - Criar outras classes que servirão para representar alguns dos requests e responses da sua API.
   - Crie alguns registros no banco para testar a sua implementação
 
 ![diagrama](.github/assets/images/diagrama.png)
@@ -1047,7 +1048,8 @@ Este algoritmo resulta numa pontuação final para cada ramo de seguro, que deve
 ### 2. Segunda Etapa
 
 - Desenvolva as rotas especificadas nos [requisitos](#requisitos), começando com os [requisitos do cliente](#requisitos-do-cliente), logo depois faça os [requisitos da casa](#requisitos-da-casa) e por fim os [requisitos do veículo](#requisitos-do-veículo).
-
+- Crie as classes que servirão para representar os requests e responses da sua API.
+- Crie os servises de cada uma das entidades.
 - Os [requisitos do seguro](#requisitos-do-seguro), não deverão ser implementados na 2º etapa.
 
 ### 3. Terceira Etapa
