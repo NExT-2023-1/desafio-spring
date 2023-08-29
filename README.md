@@ -981,7 +981,7 @@ Todos os atributos simples do Cliente são obrigatórios:
 <summary style="font-size:16px"><b>Atributos da Casa</b></summary>
 Todos os atributos da casa são obrigatórios:
 
-  - **`ownership_status`**: Um valor textual que pode ser "`owned`"ou "`mortgaged`"
+  - **`ownership_status`**: Um valor textual que pode ser "`owned`" ou "`mortgaged`"
   - **`location`**: Um valor textual que terá o endereço completo da casa.
   - **`zipcode`**: Um valor textual que terá o CEP.
 
@@ -989,7 +989,7 @@ Todos os atributos da casa são obrigatórios:
 
 <details>
 <summary style="font-size:16px"><b>Atributos do Veículo</b></summary>
-Todos os atributos do veículo são obrigatórios:
+Todos os atributos não chave do veículo são obrigatórios(salve exceção a PK):
 
   - **`brand`**: Um valor textual correspondente a marca
   - **`model`**: Um valor textual correspondente ao modelo
