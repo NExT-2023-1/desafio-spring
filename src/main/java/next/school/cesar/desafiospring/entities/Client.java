@@ -40,10 +40,10 @@ public class Client {
     @Column(nullable = false)
     private LocalDate updatedAt;
 
-    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "client")
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, mappedBy = "client")
     private List<Vehicle> vehicles;
-    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "client")
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, mappedBy = "client")
     private List<House> houses;
-    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "client")
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, mappedBy = "client")
     private List<Insurance> insurances;
 }
