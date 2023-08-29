@@ -998,7 +998,7 @@ Todos os atributos não chave do veículo são obrigatórios(salve exceção a P
 
 <details>
 <summary style="font-size:16px"><b>Atributos do Seguro</b></summary>
-Todos os atributos do Seguro são obrigatórios:
+Todos os atributos do Seguro são obrigatórios, exceto o campo `observation`:
 
 - **`type`**: Um valor textual que pode ser "`life`", "`disability`", "`home`" ou "`auto`".
 - **`risk`**: Um número inteiro correspondente a pontuação do risco
