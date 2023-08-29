@@ -780,6 +780,37 @@ Todos os atributos do veículo são obrigatórios:
   - **`year`**: Um número inteiro positivo correspondente ao ano que foi fabricado.
 </details>
 
+<details>
+<summary style="font-size:16px"><b>Atributos do Endereço</b></summary>
+Todos os atributos do veículo são obrigatórios:
+
+  - **`location`**: Um valor textual que terá o endereço completo do cliente.
+  - **`number`**: Um número inteiro positivo correspondente ao numero d endereço
+  - **`zipcode`**: Um valor textual que terá o CEP.
+  - **`observation`**: Um valor textual correspondente a observação do endereço
+
+</details>
+
+### O algoritmo de risco
+
+O aplicativo recebe a carga JSON por meio dos endpoints da API e a transforma em um perfil de risco calculando uma pontuação de risco para cada ramo de seguro (vida, invalidez, residencial e automóvel) com base nas informações fornecidas pelo usuário.
+
+Primeiro, calcula a pontuação base somando as respostas das questões de risco, resultando em um número que varia de 0 a 3. Em seguida, aplica as seguintes regras para determinar uma pontuação de risco para cada ramo de seguro.
+
+- Caso a usuária não possua renda, veículos ou moradia, ela fica inelegível para seguro de invalidez, automóvel e residência, respectivamente.
+- Se o usuário tiver mais de 60 anos, ele não terá direito ao seguro de invalidez e de vida.
+- Se o usuário tiver menos de 30 anos, desconta 2 pontos de risco de todos os ramos de seguro. Se ela tiver entre 30 e 40 anos, descontar 1.
+- Se a renda dela for superior a US$ 200 mil, deduza 1 ponto de risco de todas as linhas de seguro.
+- Se a casa do usuário estiver hipotecada, adicione 1 ponto de risco à pontuação da casa e 1 ponto de risco à pontuação de incapacidade.
+- Se o usuário tiver dependentes, adicione 1 ponto de risco aos escores de incapacidade e de vida.
+- Se o usuário for casado, adicione 1 ponto de risco à pontuação de vida e remova 1 ponto de risco de incapacidade.
+- Se o veículo do usuário foi produzido nos últimos 5 anos, adicione 1 ponto de risco à pontuação desse veículo.
+- Este algoritmo resulta numa pontuação final para cada ramo de seguro, que deve ser processada utilizando os seguintes intervalos:
+
+- 0 e abaixo são mapeados para `“econômico”` .
+- 1 e 2 são mapeados para `“regular”` .
+- 3 e acima mapeia para `“responsável”` .
+
 ## Etapas do projeto
 
 ### 1. Primeira Etapa
@@ -791,7 +822,7 @@ Todos os atributos do veículo são obrigatórios:
 
 ### 2. Segunda Etapa
 
-Desenvolva as rotas especificadas nos [requisitos](#requisitos) 
+Desenvolva as rotas especificadas nos [requisitos](#requisitos)
 
 ## Critérios de Avaliação
 
