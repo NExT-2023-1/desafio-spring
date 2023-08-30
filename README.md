@@ -487,8 +487,7 @@ Retorna um objeto do tipo casa cliente cadastrado.
   "id": long,
   "ownership_status": String,
   "location": String,
-  "zipcode": String,
-  "client_id": long,
+  "zipcode": String
 }
 ```
 </details>
@@ -532,7 +531,6 @@ Retorna um objeto do tipo casa alterado.
   "ownership_status": String,
   "location": String,
   "zipcode": String,
-  "client_id": long,
 }
 ```
 </details>
@@ -574,7 +572,6 @@ Retorna um Array do cliente, suas casas e veículos deletados.
   "ownership_status": String,
   "location": String,
   "zipcode": String,
-  "client_id": long,
 }
 ```
 </details>
@@ -637,8 +634,7 @@ Retorna um objeto do tipo veículo cadastrado.
   "id": long,
   "brand": String,
   "model": String,
-  "year": int,
-  "client_id": long
+  "year": int
 }
 ```
 </details>
@@ -679,8 +675,7 @@ Retorna um objeto do tipo veículo alterado que foi associado a um cliente.
   "id": long,
   "brand": String,
   "model": String,
-  "year": int,
-  "client_id": long
+  "year": int
 }
 ```
 </details>
@@ -723,8 +718,7 @@ Retorna um objeto do tipo veículo que foi deletado.
   "id": long,
   "brand": String,
   "model": String,
-  "year": int,
-  "client_id": long
+  "year": int
 }
 ```
 </details>
@@ -786,7 +780,6 @@ Retorna um objeto do tipo seguro cadastrado, após realizar a analise de risco p
  "risk": int,
  "analysis": Srting,
  "observation": String,
- "client_id": long,
  "createdAt": Date,
  "validateAt": Date
 }
@@ -836,7 +829,6 @@ Retorna um objeto do tipo seguro cadastrado, após realizar a analise de risco p
  "risk": int,
  "analysis": Srting,
  "observation": String,
- "client_id": long,
  "createdAt": Date,
  "validateAt": Date
 }
@@ -889,7 +881,6 @@ Retorna um objeto do tipo seguro cadastrado, após realizar a analise de risco p
  "risk": int,
  "analysis": Srting,
  "observation": String,
- "client_id": long,
  "createdAt": Date,
  "validateAt": Date
 }
@@ -942,7 +933,6 @@ Retorna um objeto do tipo seguro cadastrado, após realizar a analise de risco p
  "risk": int,
  "analysis": Srting,
  "observation": String,
- "client_id": long,
  "createdAt": Date,
  "validateAt": Date
 }
