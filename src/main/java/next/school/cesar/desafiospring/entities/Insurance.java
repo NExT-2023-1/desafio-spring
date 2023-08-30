@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Insurance {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -36,8 +36,8 @@ public class Insurance {
     private LocalDate createdAt;
     @Column(nullable = false)
     private LocalDate validatedAt;
-    
+
     @ManyToOne
-    @JoinColumn(name="client_id", nullable = false)
+    @JoinColumn(name = "client_id", nullable = false)
     private Client client;
 }
