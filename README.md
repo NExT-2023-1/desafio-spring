@@ -918,7 +918,7 @@ Envia um objeto do tipo `seguro` com o formato abaixo.
 {
   "risk_questions": List [boolean, boolean, boolean],
   "client_id": long,
-  "house_id": long
+  "vehicle_id": long
 }
 ```
 
