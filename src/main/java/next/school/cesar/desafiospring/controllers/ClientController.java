@@ -26,8 +26,7 @@ import next.school.cesar.desafiospring.services.ClientService;
 public class ClientController {
     
     private final ClientService clientService;
-
-
+    
     @GetMapping
     public ResponseEntity<List<Client>> listAll() {
         List<Client> listClients = this.clientService.listAll();
