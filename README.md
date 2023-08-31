@@ -1010,7 +1010,7 @@ Primeiro, calcula a pontuação base somando as respostas das questões de risco
 - Se o usuário tiver menos de 30 anos, desconta 2 pontos de risco de todos os ramos de seguro. Se ela tiver entre 30 e 40 anos, descontar 1.
 - Se a renda dela for superior a US$ 200 mil, deduza 1 ponto de risco de todas as linhas de seguro.
 - Se a casa do usuário estiver hipotecada, adicione 1 ponto de risco à pontuação da casa.
-- Para casa do usuario que estiver hipotecada, adicione 1 ponto de risco à pontuação de incapacidade.
+- Para cada casa do usuario que estiver hipotecada, adicione 1 ponto de risco à pontuação de incapacidade.
 - Se o usuário tiver dependentes, adicione 1 ponto de risco aos escores de incapacidade e de vida.
 - Se o usuário for casado, adicione 1 ponto de risco à pontuação de vida e remova 1 ponto de risco de incapacidade.
 - Se o veículo do usuário foi produzido nos últimos 5 anos, adicione 1 ponto de risco à pontuação desse veículo.
@@ -1021,6 +1021,8 @@ Este algoritmo resulta numa pontuação final para cada ramo de seguro, que deve
 - 0 e abaixo são mapeados para `“economic”`.
 - 1 e 2 são mapeados para `“regular”`.
 - 3 e acima mapeia para `“responsible”` .
+
+Lembrando que uma analise de segura tem validade de 30 dias, ou seja, um mês.
 
 ## Etapas do projeto
 
